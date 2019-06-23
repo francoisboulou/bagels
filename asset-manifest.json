@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/francoisboulou/bagels/static/css/main.5537f6aa.chunk.css",
-    "main.js": "/francoisboulou/bagels/static/js/main.da34b2aa.chunk.js",
-    "main.js.map": "/francoisboulou/bagels/static/js/main.da34b2aa.chunk.js.map",
-    "runtime~main.js": "/francoisboulou/bagels/static/js/runtime~main.93aee7d6.js",
-    "runtime~main.js.map": "/francoisboulou/bagels/static/js/runtime~main.93aee7d6.js.map",
-    "static/js/2.dcb5eaf8.chunk.js": "/francoisboulou/bagels/static/js/2.dcb5eaf8.chunk.js",
-    "static/js/2.dcb5eaf8.chunk.js.map": "/francoisboulou/bagels/static/js/2.dcb5eaf8.chunk.js.map",
-    "index.html": "/francoisboulou/bagels/index.html",
-    "precache-manifest.ca35a6bc31e2f69d4d7efa77981a3510.js": "/francoisboulou/bagels/precache-manifest.ca35a6bc31e2f69d4d7efa77981a3510.js",
-    "service-worker.js": "/francoisboulou/bagels/service-worker.js",
-    "static/css/main.5537f6aa.chunk.css.map": "/francoisboulou/bagels/static/css/main.5537f6aa.chunk.css.map"
+    "main.css": "/bagels/static/css/main.5537f6aa.chunk.css",
+    "main.js": "/bagels/static/js/main.da34b2aa.chunk.js",
+    "main.js.map": "/bagels/static/js/main.da34b2aa.chunk.js.map",
+    "runtime~main.js": "/bagels/static/js/runtime~main.837bd520.js",
+    "runtime~main.js.map": "/bagels/static/js/runtime~main.837bd520.js.map",
+    "static/js/2.dcb5eaf8.chunk.js": "/bagels/static/js/2.dcb5eaf8.chunk.js",
+    "static/js/2.dcb5eaf8.chunk.js.map": "/bagels/static/js/2.dcb5eaf8.chunk.js.map",
+    "index.html": "/bagels/index.html",
+    "precache-manifest.167082860d22c5c67fad804230b4b2da.js": "/bagels/precache-manifest.167082860d22c5c67fad804230b4b2da.js",
+    "service-worker.js": "/bagels/service-worker.js",
+    "static/css/main.5537f6aa.chunk.css.map": "/bagels/static/css/main.5537f6aa.chunk.css.map"
   }
 }
