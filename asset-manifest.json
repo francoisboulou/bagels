@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bagels/static/css/main.0e76401f.chunk.css",
+    "main.css": "/bagels/static/css/main.8caab222.chunk.css",
     "main.js": "/bagels/static/js/main.da34b2aa.chunk.js",
     "main.js.map": "/bagels/static/js/main.da34b2aa.chunk.js.map",
     "runtime~main.js": "/bagels/static/js/runtime~main.837bd520.js",
@@ -8,8 +8,8 @@
     "static/js/2.dcb5eaf8.chunk.js": "/bagels/static/js/2.dcb5eaf8.chunk.js",
     "static/js/2.dcb5eaf8.chunk.js.map": "/bagels/static/js/2.dcb5eaf8.chunk.js.map",
     "index.html": "/bagels/index.html",
-    "precache-manifest.d6934ec243cbf629f23ec61880ce5901.js": "/bagels/precache-manifest.d6934ec243cbf629f23ec61880ce5901.js",
+    "precache-manifest.e96d4491f9e40a0760612b7c0da00e8c.js": "/bagels/precache-manifest.e96d4491f9e40a0760612b7c0da00e8c.js",
     "service-worker.js": "/bagels/service-worker.js",
-    "static/css/main.0e76401f.chunk.css.map": "/bagels/static/css/main.0e76401f.chunk.css.map"
+    "static/css/main.8caab222.chunk.css.map": "/bagels/static/css/main.8caab222.chunk.css.map"
   }
 }
