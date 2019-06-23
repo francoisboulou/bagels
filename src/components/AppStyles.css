@@ -120,7 +120,7 @@
 
 @media (min-width: 1200px) {
     .startHeading {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     .general {
@@ -150,7 +150,7 @@
 
 @media (min-width: 1800px) {
     .startHeading {
-        font-size: 1rem;
+        font-size: 6rem;
     }
 
     .instructions {
