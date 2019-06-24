@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import instructions from '../instructions/instructions_text'
+import INSTRUCTIONS from '../text/instructions_text'
 import Dropdown from './Dropdown'
 import './AppStyles.css'
 
@@ -17,7 +17,7 @@ class StartScreen extends Component {
                 <h1 className='startHeading'>BAGELS!</h1>
                 <div className='instructions'>
                     <h2>Instructions</h2>
-                    <p>{ instructions }</p>
+                    <p>{INSTRUCTIONS}</p>
                 </div>
                 <div className='settings'>    
                     <Dropdown 
