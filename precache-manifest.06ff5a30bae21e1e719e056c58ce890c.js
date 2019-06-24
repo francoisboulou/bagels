@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "005a3fdeb45249930f1ec9702937452e",
+    "revision": "7e70653be1df6e07437c4d28792206a7",
     "url": "/bagels/index.html"
   },
   {
-    "revision": "d2a7ca861275be38f8a7",
+    "revision": "1574af1d26b082b52c6a",
     "url": "/bagels/static/css/main.eb586280.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bagels/static/js/2.dcb5eaf8.chunk.js"
   },
   {
-    "revision": "d2a7ca861275be38f8a7",
-    "url": "/bagels/static/js/main.da34b2aa.chunk.js"
+    "revision": "1574af1d26b082b52c6a",
+    "url": "/bagels/static/js/main.cfa347a7.chunk.js"
   },
   {
     "revision": "5fc9e6371f6db5af933f",
