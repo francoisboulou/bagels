@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/bagels/static/css/main.eb586280.chunk.css",
-    "main.js": "/bagels/static/js/main.cfa347a7.chunk.js",
-    "main.js.map": "/bagels/static/js/main.cfa347a7.chunk.js.map",
+    "main.css": "/bagels/static/css/main.5411a337.chunk.css",
+    "main.js": "/bagels/static/js/main.fb4991e5.chunk.js",
+    "main.js.map": "/bagels/static/js/main.fb4991e5.chunk.js.map",
     "runtime~main.js": "/bagels/static/js/runtime~main.837bd520.js",
     "runtime~main.js.map": "/bagels/static/js/runtime~main.837bd520.js.map",
-    "static/js/2.dcb5eaf8.chunk.js": "/bagels/static/js/2.dcb5eaf8.chunk.js",
-    "static/js/2.dcb5eaf8.chunk.js.map": "/bagels/static/js/2.dcb5eaf8.chunk.js.map",
+    "static/js/2.704fb596.chunk.js": "/bagels/static/js/2.704fb596.chunk.js",
+    "static/js/2.704fb596.chunk.js.map": "/bagels/static/js/2.704fb596.chunk.js.map",
     "index.html": "/bagels/index.html",
-    "precache-manifest.06ff5a30bae21e1e719e056c58ce890c.js": "/bagels/precache-manifest.06ff5a30bae21e1e719e056c58ce890c.js",
+    "precache-manifest.7fcca8502d462bf5a36ec677ce7f1ffa.js": "/bagels/precache-manifest.7fcca8502d462bf5a36ec677ce7f1ffa.js",
     "service-worker.js": "/bagels/service-worker.js",
-    "static/css/main.eb586280.chunk.css.map": "/bagels/static/css/main.eb586280.chunk.css.map"
+    "static/css/main.5411a337.chunk.css.map": "/bagels/static/css/main.5411a337.chunk.css.map",
+    "static/media/index.css": "/bagels/static/media/Road_Rage.16501323.otf",
+    "static/media/bagel.png": "/bagels/static/media/bagel.523735f3.png",
+    "static/media/fermi.png": "/bagels/static/media/fermi.8301c176.png",
+    "static/media/pico.png": "/bagels/static/media/pico.7db81759.png"
   }
 }
