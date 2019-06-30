@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './AppStyles.css'
+import '../index.css'
 
 const MARGIN = {
     margin: '0',
@@ -42,7 +42,6 @@ class Dropdown extends Component {
     }
     
     guessesCallback() {
-        // [...somewhere in here I define a variable listInfo which    I think will be useful as data in my ToDoList component...]
         const difficultyLevel = this.state.difficulty
         this.props.callbackFromParent(difficultyLevel) 
     }
@@ -57,7 +56,7 @@ class Dropdown extends Component {
                 <div>
                     {this.state.displayMenu ?
                     (
-                    <ul className='listStyle'>
+                    <ul className='difficulty'>
                         <li value="Easy" onClick={this.handleSubmit}>Easy</li>
                         <li value="Medium" onClick={this.handleSubmit}>Medium</li>
                         <li value="Hard" onClick={this.handleSubmit}>Hard</li>

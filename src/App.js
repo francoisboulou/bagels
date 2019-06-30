@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import StartScreen from './components/StartScreen.jsx'
-import PlayScreen from './components/PlayScreen.jsx'
-import EndScreen from './components/EndScreen.jsx'
+import StartScreen from './views/StartScreen.jsx'
+import PlayScreen from './views/PlayScreen.jsx'
+import EndScreen from './views/EndScreen.jsx'
 import axios from 'axios' 
-import './components/AppStyles.css'
+import './index.css'
 
 
 class App extends Component {

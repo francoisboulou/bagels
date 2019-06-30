@@ -1,0 +1,87 @@
+@import 'utilities';
+
+.playScreen {
+    width: 100%;
+    // border: 2px solid red #091833;
+    background-color: black;
+    color: #FE69B3;
+    font-family: 'road-rage';
+    display: flex;
+
+
+    * {
+        // border: 2px solid red;
+    }
+
+    .controls {
+        // border: 2px solid red;
+        width: 35%;
+        padding-top: 10%;
+
+
+
+
+
+        p {
+            font-size: 7rem;
+            line-height: 6rem;
+            text-align: center;
+            padding-bottom: 2.5%;
+        }
+
+        form {
+            padding-top: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input:focus, textarea:focus {
+                outline: none;
+            }
+
+            .input {
+                border: 0.3rem solid #fff;
+                border-radius: 2rem;
+                box-shadow: #fe019a 0 0 2rem , inset 0 0 2rem #fe019a;
+                width: 400px;
+                height: 200px;
+                background: black;
+                color:  white;
+                font-size: 11rem;
+                font-family: 'Neon';
+                font-weight: 400;
+                text-align: center;
+                text-shadow:    -.2rem -.2rem 1rem #fff,
+                                .2rem .2rem 1rem #fff,
+                                0 0 1rem #fe019a,
+                                0 0 2rem #fe019a,
+                                0 0 3rem #fe019a;
+            }
+        }
+    }
+
+    .lifeCounter {
+        position: absolute;
+        top: 3.5%;
+        left: 2.5%;
+
+        img {
+            width: 30px;
+            margin-right: 3px;
+        }
+    }
+}
+
+
+#guessAlert {
+    position: fixed;
+    display: none;
+    width: 50%;
+    height: 50%; 
+    top: 50%;
+    transform: translateY(-50%); 
+    color: white;
+    background-color: rgba(0,0,0); 
+    z-index: 2; 
+    cursor: pointer;
+}
