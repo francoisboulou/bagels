@@ -24,5 +24,6 @@ Other considerations:
 
 # Things Left to Do
 
+* Create animations for smooth presentation of difficulty options, instructions, and illegal moves
 * Adding an play/pause audio component that plays background music, to enhance the play experience
 * Continue to add and refine animations that enhance the play experience 
