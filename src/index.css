@@ -6,7 +6,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Press Start 2P Regular'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v7/e3t4euO8T-267oIAQAu6jDQyK3nVivY.ttf) format('truetype');
+  src: local('Press Start 2P Regular'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v8/e3t4euO8T-267oIAQAu6jDQyK3nVivY.ttf) format('truetype');
 }
 @font-face {
   font-family: road-rage;
@@ -62,11 +62,14 @@ body > #root > div {
 }
 .menu {
   display: none;
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 8%;
+  padding-bottom: 5%;
 }
 .menu h2 {
   font-size: 1.5rem;
@@ -165,17 +168,43 @@ body > #root > div {
   width: 30px;
   margin-right: 3px;
 }
-#guessAlert {
+.playScreen .clueImg {
+  display: flex;
+  align-items: center;
+  border: 2px solid red;
+  margin: 0 auto;
+}
+.playScreen .clueImg img {
+  width: 250px;
+  height: 250px;
+}
+#alertCont {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
   display: none;
+  z-index: 100;
+}
+#guessAlert {
+  position: relative;
+  opacity: 1;
+  border: 0.3rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: #fe019a 0 0 2rem, inset 0 0 2rem #fe019a;
   width: 50%;
   height: 50%;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   background-color: rgba(0, 0, 0);
-  z-index: 2;
   cursor: pointer;
+}
+#guessAlert p {
+  align-self: center;
+  padding: 0 5%;
+  font-size: 1.75rem;
 }
 .endScreen {
   display: flex;

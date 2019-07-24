@@ -29,11 +29,23 @@ class App extends Component {
   }
 
   getRandomNum() {
-    axios.get('https://www.random.org/integers/?num=1&min=100&max=999&col=1&base=10&format=plain')
-    .then((response) => {
-      this.setState({
-      randomNum: response.data
-    })})
+    let dupDigits = true
+
+    function hasDups (numberArr) {
+      return numberArr[0] === numberArr[1] || numberArr[0] === numberArr[2] || numberArr[1] === numberArr[2]  
+    }
+
+    while (dupDigits === true) {
+      axios.get('https://www.random.org/integers/?num=1&min=100&max=999&col=1&base=10&format=plain')
+      .then((response) => {
+        if (!hasDups((response.data+"").split("").map(Number))) {
+          this.setState({
+          randomNum: response.data
+          })  
+        }
+      })
+      dupDigits = false
+    }
   }
   
   winCallback() {
@@ -74,7 +86,7 @@ class App extends Component {
     console.log("guesses:  " + this.state.guesses)
   }
 
-  instructionsCallback(instrBool) {
+  instructionsCallback() {
     this.setState({
       instructions: false
     })

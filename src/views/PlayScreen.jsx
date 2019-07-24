@@ -19,9 +19,11 @@ class PlayScreen extends Component {
         this.lifeCounter = this.lifeCounter.bind(this)
     }
 
-    // componentDidMount() {
-
-    // }
+    componentDidMount () {
+        document.getElementById('guessInput').focus();
+          
+          
+    }
 
     handleChange(e) {
         this.setState({input: e.target.value})
@@ -29,14 +31,21 @@ class PlayScreen extends Component {
 
     handleSubmit(e) {
         e.preventDefault()
-        if (this.state.input.length === 3 && Number.isInteger(Number(this.state.input))) {
+
+        function hasDups (number) {
+            const numberArr = (number+"").split("").map(Number) 
+            return numberArr[0] === numberArr[1] || numberArr[0] === numberArr[2] || numberArr[1] === numberArr[2]  
+          }
+
+        if (this.state.input.length === 3 && Number.isInteger(Number(this.state.input)) && !hasDups(Number(this.state.input))) {
             this.setState({
                     guess: this.state.input,
                     input: '',  
                 }, () => {this.updateGuess()})
         }
         else {
-            document.getElementById('guessAlert').style.display = 'block'
+            document.getElementById('alertCont').style.display = 'flex'
+            document.getElementById('guessInput').blur();
         }
     }
   
@@ -69,7 +78,7 @@ class PlayScreen extends Component {
                 <div className='controls'>
                     <p>guess the number</p>
                     <form onSubmit={this.handleSubmit}>
-                        <input className='input'
+                        <input id='guessInput' className='input'
                         type='text'
                         value={this.state.input}
                         onChange={this.handleChange}

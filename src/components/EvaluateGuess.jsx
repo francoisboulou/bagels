@@ -2,57 +2,41 @@ import React from 'react'
 import bagel from '../images/bagel.png'
 import fermi from '../images/fermi.png'
 import pico from '../images/pico.png'
-
-
-const BAGEL = {
-    width: '250px',
-    height: '250px',
-    // marginTop: '2%',
-}     
-
-const FERMI = {
-    width: '250px',
-    height: '250px',
-    // marginTop: '2%',
-}
-
-const PICO = {
-    width: '250px',
-    height: '250px',
-    // marginTop: '2%',
-}
-
+import '../index.css'
+import { log } from 'util';
 
 
 export function EvaluateGuess (props) {
   
-    let randomNum = [...String(props.randomNum)]  
+    const randomNum = [...String(props.randomNum)]  
     let guess = [...String(props.guess)]        
     let result = []
+    let resultStr = []
     
-    if (props.guess){
+    if (props.guess) {
         guess.forEach((digit, i) => {           
             if (randomNum.includes(digit)) {
                 if (digit === randomNum[i]) { 
-                    result.push(<img style={FERMI} src={fermi} alt=""/>)
-                    delete randomNum[i]
+                    result.push(<img src={fermi} alt=""/>)
+                    console.log("pushed fermi", i);
                 }
                 else {
-                    result.push(<img style={PICO} src={pico} alt="" />)
-                    delete randomNum[i]
+                    result.push(<img src={pico} alt="" />)
+                    resultStr.push("pico")
+                    console.log("pushed pico", i);
                 }
             }
         })
     
         if (!result.length) {
-            result.push(<img style={BAGEL} src={bagel} alt=""/>)
+            result.push(<img src={bagel} alt=""/>)
         }
     
-        if (result.length === 3 && !result.includes("pico")) {            
+        if (result.length === 3 && !resultStr.includes("pico")) { //add result string object         
             props.winCallback()
         }
     
-        return <div>{result}</div>
+        return <div className='clueImg'>{result}</div>
     }
     return null
 }

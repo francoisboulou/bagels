@@ -70,18 +70,51 @@
             margin-right: 3px;
         }
     }
+
+    .clueImg {
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        display: flex;
+        align-items: center;
+        border: 2px solid red;
+        margin: 0 auto;
+    }
+    
 }
 
+#alertCont {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0);
+    display: none;
+    z-index: 100; 
+}
 
 #guessAlert {
-    position: fixed;
-    display: none;
+    position: relative;
+    opacity: 1;
+    border: 0.3rem solid #fff;
+    border-radius: 2rem;
+    box-shadow: #fe019a 0 0 2rem , inset 0 0 2rem #fe019a;
     width: 50%;
     height: 50%; 
     top: 50%;
-    transform: translateY(-50%); 
+    left: 50%;
+    transform: translate(-50%, -50%); 
     color: white;
     background-color: rgba(0,0,0); 
-    z-index: 2; 
+    
     cursor: pointer;
+
+    p {
+        align-self: center;
+        padding: 0 5%;
+        font-size: 1.75rem;
+    }
 }
+
+
