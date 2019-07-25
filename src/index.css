@@ -40,6 +40,7 @@ body > #root > div {
   /*credit for this button to https://codepen.io/DanielWeiner */
 }
 .startScreen {
+  height: 100%;
   background-color: black;
   font-family: 'Press Start 2P', cursive;
   color: #FF69B4;
@@ -120,6 +121,7 @@ body > #root > div {
 }
 .playScreen {
   width: 100%;
+  height: 100%;
   background-color: black;
   color: #FE69B3;
   font-family: 'road-rage';

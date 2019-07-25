@@ -4,6 +4,8 @@ import PlayScreen from './views/PlayScreen.jsx'
 import EndScreen from './views/EndScreen.jsx'
 import axios from 'axios' 
 import './index.css'
+import notMegamanUnfortunately from './audio/Chiptronical.ogg'
+import silence from './audio/silence.mp3'
 
 
 class App extends Component {
@@ -14,10 +16,14 @@ class App extends Component {
       randomNum: 0,
       instructions: true,
       win: false,
-      guesses: 15
+      guesses: 15,
+      music : notMegamanUnfortunately,
+      silence : silence,
+      musicPaused: false,
     }
 
     this.getRandomNum = this.getRandomNum.bind(this)
+    this.renderScreen = this.renderScreen.bind(this)
 
   }
 
@@ -29,23 +35,28 @@ class App extends Component {
   }
 
   getRandomNum() {
-    let dupDigits = true
 
-    function hasDups (numberArr) {
-      return numberArr[0] === numberArr[1] || numberArr[0] === numberArr[2] || numberArr[1] === numberArr[2]  
+    function hasDups(numberStr) {
+      return numberStr[0] === numberStr[1] || numberStr[0] === numberStr[2] || numberStr[1] === numberStr[2]  
     }
 
-    while (dupDigits === true) {
-      axios.get('https://www.random.org/integers/?num=1&min=100&max=999&col=1&base=10&format=plain')
-      .then((response) => {
-        if (!hasDups((response.data+"").split("").map(Number))) {
-          this.setState({
-          randomNum: response.data
-          })  
+    axios.get('https://www.random.org/integers/?num=1&min=100&max=999&col=1&base=10&format=plain')
+    .then((response) => {
+      let responseStr = response.data+''
+      let hasDupss = !hasDups(responseStr) ? false : true
+      console.log(hasDupss);
+      console.log(response.data +1);
+      
+      while(hasDupss === true) {
+        responseStr = ((Number(responseStr) + 1) + '')
+        if (!hasDups(responseStr)) {
+          hasDupss = false
         }
-      })
-      dupDigits = false
-    }
+      }
+      this.setState({
+      randomNum: Number(responseStr)
+      })  
+    })    
   }
   
   winCallback() {
@@ -101,35 +112,68 @@ class App extends Component {
     }, () => {this.getRandomNum()}) 
   }
 
-  render() {
-    console.log(this.state.randomNum)
+  renderScreen() {
     if (this.state.instructions === true) {
-
       return (
         <StartScreen 
         callbackFromParent= {this.difficultyCallback.bind(this)} 
         instructionsCallback = {this.instructionsCallback.bind(this)}
         />
       )
-    }
-    
-    if (this.state.guesses === 0 || this.state.win === true) {
+    } else if (this.state.guesses === 0 || this.state.win === true) {
       return (
         <EndScreen
         PlayAgainCallback = {this.PlayAgainCallback.bind(this)}
         win = {this.state.win}
         />
       )
+    } else {
+        return (
+            <PlayScreen
+            randomNum = {this.state.randomNum}
+            guesses = {this.state.guesses}
+            callbackFromParent={this.guessCallback.bind(this)}
+            winCallback = {this.winCallback.bind(this)} 
+            />
+        )
     }
+  }
 
+  render() {
+    console.log(this.state.randomNum)
     return (
-        <PlayScreen
-        randomNum = {this.state.randomNum}
-        guesses = {this.state.guesses}
-        callbackFromParent={this.guessCallback.bind(this)}
-        winCallback = {this.winCallback.bind(this)} 
-        />
-    )
+      <div style={{width: '100%', height: '100vh'}}>
+        <iframe title="fakey" src={this.state.silence} allow="autoplay" id="audio" style={{display:"none"}}></iframe>
+        <audio id="strtMusic" ref="audio_tag" src={this.state.music} autoPlay/>
+        <p onClick={() => {
+                    if (this.state.musicPaused === false) {
+                        document.getElementById('strtMusic').pause()
+                        this.setState({
+                            musicPaused: true,
+                        }) 
+                    }
+                    else {
+                        document.getElementById('strtMusic').play()
+                        this.setState({
+                            musicPaused: false,
+                        })
+                    }}}
+                    style={{
+                      fontSize: "45px",
+                      color: '#FF69B4',
+                      fontFamily:'"Press Start 2P", cursive',
+                      fontStyle: 'italic',
+                      textShadow: '2px 2px #ff0000', 
+                      position: "absolute", 
+                      bottom:"2.5%", 
+                      right:"2.5%", 
+                      cursor: 'pointer'}}>||
+        </p>
+
+        {this.renderScreen()}
+      
+      </div>
+    ) 
   }
 }
 
