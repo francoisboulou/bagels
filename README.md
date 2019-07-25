@@ -23,7 +23,7 @@ I am a fan of the Web Developer Roadmap (https://hackernoon.com/the-2019-web-dev
 
 # Things Left to Do
 
-* Create animations for smooth presentation of difficulty options, instructions, and illegal moves
+* Create animations for smooth presentation of difficulty options, instructions, and illegal move alerts
 * Adding music and sound effects to play and win screens to enhance the play experience
 * Continue to add and refine animations that enhance the play experience
 * Refine my code for performance, and to adhere to React conventions (adding keys to array items, for example)
