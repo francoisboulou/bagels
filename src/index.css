@@ -175,15 +175,15 @@ body > #root > div {
   width: 30px;
   margin-right: 3px;
 }
-.playScreen .clueImg {
+.playScreen .clueImgArr {
   display: flex;
   align-items: center;
-  border: 2px solid red;
   margin: 0 auto;
 }
-.playScreen .clueImg img {
+.playScreen .clueImgArr .clueImg {
   width: 250px;
   height: 250px;
+  position: relative;
 }
 #alertCont {
   position: fixed;
