@@ -192,8 +192,27 @@ body > #root > div {
   background-color: rgba(0, 0, 0, 0);
   z-index: 100;
 }
+#alertButton {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3vh;
+  color: #FF69B4;
+  font-style: italic;
+  text-shadow: 2px 2px #ff0000;
+  background-color: black;
+  border: none;
+  padding: 1.5% 2.5%;
+  width: 10vw;
+  text-align: center;
+}
+#alertButton:focus {
+  outline: 1px solid #FF69B4;
+}
 #guessAlert {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   opacity: 1;
   border: 0.3rem solid #fff;
   border-radius: 2rem;
@@ -207,7 +226,10 @@ body > #root > div {
   background-color: rgba(0, 0, 0);
   cursor: pointer;
 }
-#guessAlert p {
+#guessAlert div {
+  width: 90%;
+}
+#guessAlert div p {
   align-self: center;
   padding: 0 5%;
   font-size: 1.75rem;

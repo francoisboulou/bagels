@@ -4,7 +4,7 @@ import PlayScreen from './views/PlayScreen.jsx'
 import EndScreen from './views/EndScreen.jsx'
 import axios from 'axios' 
 import './index.css'
-import notMegamanUnfortunately from './audio/Chiptronical.ogg'
+import notMegamanUnfortunately from './audio/watermusic_II.mp3'
 import silence from './audio/silence.mp3'
 
 
