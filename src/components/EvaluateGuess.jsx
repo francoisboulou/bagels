@@ -7,9 +7,16 @@ import '../index.css'
 
 class EvaluateGuess extends Component {
     
-    // componentDidUpdate() {
-    //     document.getElementById
-    // }
+    componentDidMount() {
+        // let randomNum = [...String(this.props.randomNum)]  
+        // let guess = [...String(this.props.guess)]        
+        // let result = []
+        // let resultStr = []
+    }
+
+    componentDidUpdate() {
+        // result = []
+    }
 
     render() {
 

@@ -236,14 +236,22 @@ body > #root > div {
 }
 .endScreen {
   display: flex;
+  background-color: black;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  border: 2px solid red;
 }
-.endScreen h1 {
+.endScreen h1,
+.endScreen h2 {
   font-size: 8rem;
+  font-family: 'Press Start 2P', cursive;
+  color: #FF69B4;
+  font-style: italic;
+  text-shadow: 2px 2px #ff0000;
+}
+.endScreen h2 {
+  font-size: 2rem;
 }
 @media (min-width: 400px) {
   .startHeading {
