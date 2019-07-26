@@ -32,11 +32,11 @@ class StartScreen extends Component {
                     <h1 className='title'>BAGELS!</h1>   
                     <div className='menu'>
                         <Instructions />
-                        <h2 onClick={this.openOverlay}>Instructions</h2>    
-                        <Dropdown 
+                        <h2 className='menuItem' onClick={this.openOverlay}>Instructions</h2>    
+                        <Dropdown
                         callbackFromParent={this.props.callbackFromParent.bind(this)}
                         />
-                        <h2 onClick={this.props.instructionsCallback.bind(this)}>Start Game</h2>
+                        <h2 className='menuItem' onClick={this.props.instructionsCallback.bind(this)}>Start Game</h2>
                     </div>  
                 </div>
         )}

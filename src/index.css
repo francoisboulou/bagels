@@ -73,12 +73,19 @@ body > #root > div {
   justify-content: flex-end;
   padding-bottom: 5%;
 }
+.menu .menuItem:hover {
+  padding: 0 3%;
+  background-color: white;
+}
 .menu h2 {
   font-size: 1.5rem;
   line-height: 3rem;
 }
 .difficulty {
   color: yellow;
+}
+.diffMenu:hover {
+  background-color: #FF69B4;
 }
 @keyframes slideUp {
   0% {

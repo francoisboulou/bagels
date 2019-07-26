@@ -50,16 +50,16 @@ class Dropdown extends Component {
         return (
             <div>
                 <div>
-                    <h2 style={MARGIN} onClick={this.openMenu}>Difficulty</h2>
+                    <h2 className='menuItem' style={MARGIN} onClick={this.openMenu}>Difficulty</h2>
                     <p>{this.state.difficulty}</p>
                 </div>
                 <div>
                     {this.state.displayMenu ?
                     (
                     <ul className='difficulty'>
-                        <li value="Easy" onClick={this.handleSubmit}>Easy</li>
-                        <li value="Medium" onClick={this.handleSubmit}>Medium</li>
-                        <li value="Hard" onClick={this.handleSubmit}>Hard</li>
+                        <li className='diffMenu' value="Easy" onClick={this.handleSubmit}>Easy</li>
+                        <li className='diffMenu' value="Medium" onClick={this.handleSubmit}>Medium</li>
+                        <li className='diffMenu' value="Hard" onClick={this.handleSubmit}>Hard</li>
                     </ul>
                     )
                     :
