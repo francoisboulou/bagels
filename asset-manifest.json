@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/bagels/static/css/main.d57231e9.chunk.css",
-    "main.js": "/bagels/static/js/main.3f146f98.chunk.js",
-    "main.js.map": "/bagels/static/js/main.3f146f98.chunk.js.map",
+    "main.css": "/bagels/static/css/main.b714ce26.chunk.css",
+    "main.js": "/bagels/static/js/main.8d6517a7.chunk.js",
+    "main.js.map": "/bagels/static/js/main.8d6517a7.chunk.js.map",
     "runtime~main.js": "/bagels/static/js/runtime~main.837bd520.js",
     "runtime~main.js.map": "/bagels/static/js/runtime~main.837bd520.js.map",
-    "static/js/2.72f0b32d.chunk.js": "/bagels/static/js/2.72f0b32d.chunk.js",
-    "static/js/2.72f0b32d.chunk.js.map": "/bagels/static/js/2.72f0b32d.chunk.js.map",
+    "static/js/2.072c23c5.chunk.js": "/bagels/static/js/2.072c23c5.chunk.js",
+    "static/js/2.072c23c5.chunk.js.map": "/bagels/static/js/2.072c23c5.chunk.js.map",
     "index.html": "/bagels/index.html",
-    "precache-manifest.33ebabec15d468a826414bef0118be96.js": "/bagels/precache-manifest.33ebabec15d468a826414bef0118be96.js",
+    "precache-manifest.00324cecbf97fa774e19d1790054699f.js": "/bagels/precache-manifest.00324cecbf97fa774e19d1790054699f.js",
     "service-worker.js": "/bagels/service-worker.js",
-    "static/css/main.d57231e9.chunk.css.map": "/bagels/static/css/main.d57231e9.chunk.css.map",
+    "static/css/main.b714ce26.chunk.css.map": "/bagels/static/css/main.b714ce26.chunk.css.map",
     "static/media/index.css": "/bagels/static/media/Road_Rage.16501323.otf",
     "static/media/bagel.png": "/bagels/static/media/bagel.523735f3.png",
     "static/media/fermi.png": "/bagels/static/media/fermi.8301c176.png",
-    "static/media/megaMan.mp3": "/bagels/static/media/megaMan.88f723ca.mp3",
     "static/media/pico.png": "/bagels/static/media/pico.7db81759.png",
-    "static/media/silence.mp3": "/bagels/static/media/silence.7f1ee86f.mp3"
+    "static/media/silence.mp3": "/bagels/static/media/silence.7f1ee86f.mp3",
+    "static/media/watermusic_II.mp3": "/bagels/static/media/watermusic_II.113ca77d.mp3"
   }
 }
