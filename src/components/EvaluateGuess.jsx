@@ -3,7 +3,6 @@ import bagel from '../images/bagel.png'
 import fermi from '../images/fermi.png'
 import pico from '../images/pico.png'
 import '../index.css'
-import { log } from 'util';
 
 
 export function EvaluateGuess (props) {
@@ -32,7 +31,7 @@ export function EvaluateGuess (props) {
             result.push(<img src={bagel} alt=""/>)
         }
     
-        if (result.length === 3 && !resultStr.includes("pico")) { //add result string object         
+        if (result.length === 3 && !resultStr.includes("pico")) {         
             props.winCallback()
         }
     
@@ -41,18 +40,4 @@ export function EvaluateGuess (props) {
     return null
 }
 
-
-// guess = ''
-
-// playAgain = 'Y'
-
-// while playAgain == 'Y':
-//     secretNumber = secretNum()
-//     while guess != secretNumber:
-//         guess = getGuess()
-//         compareGuess()
-//     else:
-//         print('yay!')
-//         playAgain = input('play again? Enter Y to play again and any other key to quit')
-        
 

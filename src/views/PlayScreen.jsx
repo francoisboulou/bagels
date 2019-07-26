@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { EvaluateGuess } from '../components/EvaluateGuess.jsx'
-import { Alert } from '../components/Alert.jsx'
+import Alert from '../components/Alert.jsx'
 import life from '../images/life.png'
 import '../index.css'
 
@@ -11,18 +11,19 @@ class PlayScreen extends Component {
         this.state = {
             input : '',
             guess: 0,
+            displayAlert: false,
         }
 
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
         this.updateGuess = this.updateGuess.bind(this)
         this.lifeCounter = this.lifeCounter.bind(this)
+        this.renderAlert = this.renderAlert.bind(this)
+        this.handleAlertClick = this.handleAlertClick.bind(this)
     }
 
-    componentDidMount () {
+    componentDidMount() {
         document.getElementById('guessInput').focus();
-          
-          
     }
 
     handleChange(e) {
@@ -44,9 +45,16 @@ class PlayScreen extends Component {
                 }, () => {this.updateGuess()})
         }
         else {
-            document.getElementById('alertCont').style.display = 'flex'
-            document.getElementById('guessInput').blur();
+            this.setState({
+                displayAlert: true,
+            }, function() {document.getElementById('alertButton').focus()})
         }
+    }
+
+    handleAlertClick() {
+        this.setState({
+            displayAlert: false,
+        }, function(){document.getElementById('guessInput').focus()})
     }
   
     updateGuess() {
@@ -67,13 +75,24 @@ class PlayScreen extends Component {
         return lives
     }
 
+    renderAlert() {
+        if(this.state.displayAlert) {
+            return (
+                <Alert
+                handleAlertClick={this.handleAlertClick}
+                // handleAlertKeydown={this.handleAlertKeydown}
+                handleAlertKeyup={this.handleAlertKeyup} 
+                />
+            )
+        } 
+    }
+
     render() {
         console.log("submit guess is rendering")
         console.log("guess: " + this.state.guess);
                 
         return (
             <div className='playScreen'>
-                <Alert />
                 <div className='lifeCounter'>{this.lifeCounter(this.props.guesses)}</div>
                 <div className='controls'>
                     <p>guess the number</p>
@@ -90,6 +109,7 @@ class PlayScreen extends Component {
                 randomNum = {this.props.randomNum}
                 winCallback = {this.props.winCallback.bind(this)} 
                 />
+                {this.renderAlert()}
             </div>
         )
     }
