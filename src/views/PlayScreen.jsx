@@ -12,6 +12,7 @@ class PlayScreen extends Component {
             input : '',
             guess: 0,
             displayAlert: false,
+            displayClues: false,
         }
 
         this.handleChange = this.handleChange.bind(this)
@@ -96,7 +97,7 @@ class PlayScreen extends Component {
                 <div className='lifeCounter'>{this.lifeCounter(this.props.guesses)}</div>
                 <div className='controls'>
                     <p>guess the number</p>
-                    <form onSubmit={this.handleSubmit}>
+                    <form autoComplete="off" onSubmit={this.handleSubmit}>
                         <input id='guessInput' className='input'
                         type='text'
                         value={this.state.input}

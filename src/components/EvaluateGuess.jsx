@@ -6,23 +6,12 @@ import '../index.css'
 
 
 class EvaluateGuess extends Component {
-    
-    componentDidMount() {
-        // let randomNum = [...String(this.props.randomNum)]  
-        // let guess = [...String(this.props.guess)]        
-        // let result = []
-        // let resultStr = []
-    }
-
-    componentDidUpdate() {
-        // result = []
-    }
 
     render() {
-
+        
         let randomNum = [...String(this.props.randomNum)]  
         let guess = [...String(this.props.guess)]        
-        let result = []
+        let result = []        
         let resultStr = []
 
         if (this.props.guess) {
@@ -48,10 +37,9 @@ class EvaluateGuess extends Component {
                 this.props.winCallback()
             }
         }
-    
 
         return (
-        <div className='clueImgArr'>{result}</div>
+            <div id='clueImgArr'>{result}</div>
         )
     } 
 }

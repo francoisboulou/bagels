@@ -175,12 +175,12 @@ body > #root > div {
   width: 30px;
   margin-right: 3px;
 }
-.playScreen .clueImgArr {
+.playScreen #clueImgArr {
   display: flex;
   align-items: center;
   margin: 0 auto;
 }
-.playScreen .clueImgArr .clueImg {
+.playScreen #clueImgArr .clueImg {
   width: 250px;
   height: 250px;
   position: relative;
@@ -203,6 +203,7 @@ body > #root > div {
   padding: 1.5% 2.5%;
   width: 10vw;
   text-align: center;
+  cursor: pointer;
 }
 #alertButton:focus {
   outline: 1px solid #FF69B4;
@@ -252,6 +253,7 @@ body > #root > div {
 }
 .endScreen h2 {
   font-size: 2rem;
+  cursor: pointer;
 }
 @media (min-width: 400px) {
   .startHeading {
