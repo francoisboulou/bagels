@@ -1,27 +1,25 @@
-@import 'utilities';
-
+@import "utilities";
 
 .endScreen {
+  display: flex;
+  background-color: black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  // border: 2px solid red;
 
-    display: flex;
-    background-color: black;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    // border: 2px solid red;
+  h1,
+  h2 {
+    font-size: 8rem;
+    font-family: "Press Start 2P", cursive;
+    color: #ff69b4;
+    font-style: italic;
+    text-shadow: 2px 2px #ff0000;
+  }
 
-    h1, h2 {
-        font-size: 8rem;
-        font-family: 'Press Start 2P', cursive;
-        color: #FF69B4;
-        font-style: italic;
-        text-shadow: 2px 2px #ff0000;
-    }
-
-    h2 {
-        font-size: 2rem;
-        cursor: pointer;
-    }
+  h2 {
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }
-
