@@ -12,11 +12,11 @@
 }
 @font-face {
   font-family: road-rage;
-  src: url("./styles/fonts/Road_Rage.otf") format("opentype");
+  src: url("../fonts/Road_Rage.otf") format("opentype");
 }
 @font-face {
   font-family: neon;
-  src: url("./styles/fonts/Neon.ttf") format("truetype");
+  src: url("../fonts/Neon.ttf") format("truetype");
 }
 * {
   margin: 0;

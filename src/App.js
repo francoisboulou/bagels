@@ -4,8 +4,8 @@ import PlayScreen from "./views/PlayScreen.jsx";
 import EndScreen from "./views/EndScreen.jsx";
 import axios from "axios";
 import "./index.css";
-import notMegamanUnfortunately from "./audio/watermusic_II.mp3";
-import silence from "./audio/silence.mp3";
+import notMegamanUnfortunately from "./assets/audio/watermusic_II.mp3";
+import silence from "./assets/audio/silence.mp3";
 
 class App extends Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import bagel from "../images/bagel.png";
-import fermi from "../images/fermi.png";
-import pico from "../images/pico.png";
+import bagel from "../assets/images/bagel.png";
+import fermi from "../assets/images/fermi.png";
+import pico from "../assets/images/pico.png";
 import "../index.css";
 
 class EvaluateGuess extends Component {

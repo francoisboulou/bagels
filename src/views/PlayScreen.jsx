@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import EvaluateGuess from "../components/EvaluateGuess.jsx";
 import Alert from "../components/Alert.jsx";
-import life from "../images/life.png";
+import life from "../assets/images/life.png";
 import "../index.css";
 
 class PlayScreen extends Component {

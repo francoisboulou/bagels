@@ -1,7 +1,7 @@
 import React from "react";
-import pico from "../images/pico.png";
-import fermi from "../images/fermi.png";
-import bagel from "../images/bagel.png";
+import pico from "../assets/images/pico.png";
+import fermi from "../assets/images/fermi.png";
+import bagel from "../assets/images/bagel.png";
 import "../index.css";
 
 const BAGEL = {
