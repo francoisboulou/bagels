@@ -4,10 +4,12 @@ Please go to https://francoisboulou.github.io/bagels/ for the live version. A ve
 
 I am a fan of the Web Developer Roadmap (https://hackernoon.com/the-2019-web-developer-roadmap-ab89ac3c380e) and attempt to cover a few concepts in it with every project. The main ideas/technologies covered in this project are:
 
-* React components/functions
+* React basics (components, state, lifecycle methods)
 * ES6 syntax (arrow funtcions, promises, map/filter/reduce)
-* APIs
 * Use of NPM and YARN package managers
+* Linters (ESLint and Prettier)
+* Minor use of APIs (Random.org)
+
 
  # Some Things I've Learned on This Project
 
