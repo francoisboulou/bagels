@@ -160,8 +160,7 @@ class App extends Component {
         ></iframe>
         <audio id="strtMusic" ref="audio_tag" src={this.state.music} autoPlay />
         <p
-          onClic
-          k={() => {
+          onClick={() => {
             if (this.state.musicPaused === false) {
               document.getElementById("strtMusic").pause();
               this.setState({
