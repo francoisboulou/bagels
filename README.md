@@ -26,7 +26,7 @@ I am a fan of the Web Developer Roadmap (https://hackernoon.com/the-2019-web-dev
 
 # Things Left to Do
 
-* Refine my code for performance, and to adhere to React conventions (adding keys to array items, and avoiding direct DOM manipulations, for example)
+* Refine my code for performance, and to adhere to React conventions (~adding keys to array items~, and avoiding direct DOM manipulations, for example)
 * Add arrow key navigation functionality to start menu for more classic game experience
 * Add simple animations for interaction with difficulty options, instructions, and illegal move alerts (highlighted items flash when selected, fade ins/outs for overlays or another similar transition)
 * Adding sound effects to play actions and win/lose screen to enhance the play experience
