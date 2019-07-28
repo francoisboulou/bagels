@@ -76,28 +76,21 @@ class App extends Component {
 
   difficultyCallback(chosenDifficulty) {
     if (chosenDifficulty === "Easy") {
-      console.log("chose easy");
-
       this.setState({
         guesses: 15
       });
     }
 
     if (chosenDifficulty === "Medium") {
-      console.log("chose medium");
-
       this.setState({
         guesses: 10
       });
     }
     if (chosenDifficulty === "Hard") {
-      console.log("chose hard");
-
       this.setState({
         guesses: 5
       });
     }
-    console.log("guesses:  " + this.state.guesses);
   }
 
   instructionsCallback() {
@@ -148,7 +141,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.randomNum);
     return (
       <div style={{ width: "100%", height: "100vh" }}>
         <iframe

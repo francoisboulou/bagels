@@ -91,7 +91,7 @@ class PlayScreen extends Component {
         lives.push(guesses - 5);
         break;
       } else {
-        lives.push(<img src={life} alt="" />);
+        lives.push(<img key={"key" + String(i)} src={life} alt="" />);
       }
     }
     return lives;

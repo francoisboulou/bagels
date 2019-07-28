@@ -15,18 +15,32 @@ class EvaluateGuess extends Component {
       guess.forEach((digit, i) => {
         if (randomNum.includes(digit)) {
           if (digit === randomNum[i]) {
-            result.push(<img className="clueImg" src={fermi} alt="" />);
-            console.log("pushed fermi", i);
+            result.push(
+              <img
+                key={"clue" + String(i)}
+                className="clueImg"
+                src={fermi}
+                alt=""
+              />
+            );
           } else {
-            result.push(<img className="clueImg" src={pico} alt="" />);
+            result.push(
+              <img
+                key={"clue" + String(i)}
+                className="clueImg"
+                src={pico}
+                alt=""
+              />
+            );
             resultStr.push("pico");
-            console.log("pushed pico", i);
           }
         }
       });
 
       if (!result.length) {
-        result.push(<img className="clueImg" src={bagel} alt="" />);
+        result.push(
+          <img key={"bagel"} className="clueImg" src={bagel} alt="" />
+        );
       }
 
       if (result.length === 3 && !resultStr.includes("pico")) {
