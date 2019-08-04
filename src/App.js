@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
 
     this.state = {
-      randomNum: 0,
+      randNum: 0,
       instructions: true,
       win: false,
       guesses: 15,
@@ -24,10 +24,10 @@ class App extends Component {
     this.getRandomNum = this.getRandomNum.bind(this);
     this.renderScreen = this.renderScreen.bind(this);
     this.winCallback = this.winCallback.bind(this);
-    this.guessCallback = this.guessCallback.bind(this);
+    this.updateLives = this.updateLives.bind(this);
     this.difficultyCallback = this.difficultyCallback.bind(this);
     this.instructionsCallback = this.instructionsCallback.bind(this);
-    this.PlayAgainCallback = this.PlayAgainCallback.bind(this);
+    this.playAgainCallback = this.playAgainCallback.bind(this);
   }
 
   componentDidMount() {
@@ -57,7 +57,7 @@ class App extends Component {
         }
 
         this.setState({
-          randomNum: Number(responseStr)
+          randNum: responseStr
         });
       });
   }
@@ -68,9 +68,9 @@ class App extends Component {
     });
   }
 
-  guessCallback(guessesLeft) {
+  updateLives(livesLeft) {
     this.setState({
-      guesses: guessesLeft
+      guesses: livesLeft
     });
   }
 
@@ -99,7 +99,7 @@ class App extends Component {
     });
   }
 
-  PlayAgainCallback() {
+  playAgainCallback() {
     this.setState(
       {
         instructions: true,
@@ -117,24 +117,24 @@ class App extends Component {
     if (this.state.instructions === true) {
       return (
         <StartScreen
-          callbackFromParent={this.difficultyCallback.bind(this)}
-          instructionsCallback={this.instructionsCallback.bind(this)}
+          callbackFromParent={this.difficultyCallback}
+          instructionsCallback={this.instructionsCallback}
         />
       );
     } else if (this.state.guesses === 0 || this.state.win === true) {
       return (
         <EndScreen
-          PlayAgainCallback={this.PlayAgainCallback.bind(this)}
+          PlayAgainCallback={this.playAgainCallback}
           win={this.state.win}
         />
       );
     } else {
       return (
         <PlayScreen
-          randomNum={this.state.randomNum}
+          randNum={this.state.randNum}
           guesses={this.state.guesses}
-          callbackFromParent={this.guessCallback.bind(this)}
-          winCallback={this.winCallback.bind(this)}
+          updateLives={this.updateLives}
+          winCallback={this.winCallback}
         />
       );
     }
