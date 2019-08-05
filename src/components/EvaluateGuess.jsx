@@ -67,7 +67,7 @@ class EvaluateGuess extends Component {
       );
     }
 
-    if (this.result.length === 3 && this.pico) {
+    if (this.result.length === 3 && !this.pico) {
       this.props.winCallback();
     }
   }
@@ -75,6 +75,7 @@ class EvaluateGuess extends Component {
   popResult() {
     if (this.props.guess.length) {
       if (this.validGuess(this.props.guess)) {
+        this.props.updateLives();
         this.returnClues([...this.props.guess], this.props.randNum);
       } else {
         this.result.push(

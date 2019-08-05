@@ -13,16 +13,16 @@ class PlayScreen extends Component {
     };
 
     this.updateGuess = this.updateGuess.bind(this);
+    // this.updateLives = this.updateLives.bind(this);
   }
 
   componentDidMount() {
     document.getElementById("guessInput").focus();
-    // console.log(this.props.randomNum);
   }
 
-  updateLives() {
-    this.props.updateLives(this.props.guesses - 1);
-  }
+  // updateLives() {
+  //   this.props.updateLives(this.props.guesses - 1);
+  // }
 
   updateGuess(guess) {
     this.setState({
@@ -33,12 +33,13 @@ class PlayScreen extends Component {
   render() {
     return (
       <div className="playScreen">
-        <LifeCounter guesses={this.props.guesses} />
+        <LifeCounter lives={this.props.lives} />
         <Input updateGuess={this.updateGuess} />
         <EvaluateGuess
           guess={this.state.guess}
           randNum={this.props.randNum}
           winCallback={this.props.winCallback.bind(this)}
+          updateLives={this.props.updateLives.bind(this)}
         />
       </div>
     );

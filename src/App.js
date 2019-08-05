@@ -15,7 +15,7 @@ class App extends Component {
       randNum: 0,
       instructions: true,
       win: false,
-      guesses: 15,
+      lives: 15,
       music: notMegamanUnfortunately,
       silence: silence,
       musicPaused: false
@@ -32,6 +32,10 @@ class App extends Component {
 
   componentDidMount() {
     this.getRandomNum();
+  }
+
+  componentDidUpdate() {
+    console.log(this.state.randNum, this.state.lives);
   }
 
   getRandomNum() {
@@ -68,27 +72,28 @@ class App extends Component {
     });
   }
 
-  updateLives(livesLeft) {
+  updateLives() {
+    const livesLeft = this.state.lives - 1;
     this.setState({
-      guesses: livesLeft
+      lives: livesLeft
     });
   }
 
   difficultyCallback(chosenDifficulty) {
     if (chosenDifficulty === "Easy") {
       this.setState({
-        guesses: 15
+        lives: 15
       });
     }
 
     if (chosenDifficulty === "Medium") {
       this.setState({
-        guesses: 10
+        lives: 10
       });
     }
     if (chosenDifficulty === "Hard") {
       this.setState({
-        guesses: 5
+        lives: 5
       });
     }
   }
@@ -103,7 +108,7 @@ class App extends Component {
     this.setState(
       {
         instructions: true,
-        guesses: 15,
+        lives: 15,
         win: false,
         randomNum: 0
       },
@@ -121,7 +126,7 @@ class App extends Component {
           instructionsCallback={this.instructionsCallback}
         />
       );
-    } else if (this.state.guesses === 0 || this.state.win === true) {
+    } else if (this.state.lives === 0 || this.state.win === true) {
       return (
         <EndScreen
           PlayAgainCallback={this.playAgainCallback}
@@ -132,7 +137,7 @@ class App extends Component {
       return (
         <PlayScreen
           randNum={this.state.randNum}
-          guesses={this.state.guesses}
+          lives={this.state.lives}
           updateLives={this.updateLives}
           winCallback={this.winCallback}
         />
