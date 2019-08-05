@@ -2,10 +2,9 @@ import React, { Component } from "react";
 import StartScreen from "./views/StartScreen.jsx";
 import PlayScreen from "./views/PlayScreen.jsx";
 import EndScreen from "./views/EndScreen.jsx";
+import Music from "./components/Music.jsx";
 import axios from "axios";
 import "./index.css";
-import notMegamanUnfortunately from "./assets/audio/watermusic_II.mp3";
-import silence from "./assets/audio/silence.mp3";
 
 class App extends Component {
   constructor(props) {
@@ -15,10 +14,7 @@ class App extends Component {
       randNum: 0,
       instructions: true,
       win: false,
-      lives: 15,
-      music: notMegamanUnfortunately,
-      silence: silence,
-      musicPaused: false
+      lives: 15
     };
 
     this.getRandomNum = this.getRandomNum.bind(this);
@@ -147,44 +143,8 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ width: "100%", height: "100vh" }}>
-        <iframe
-          title="fakey"
-          src={this.state.silence}
-          allow="autoplay"
-          id="audio"
-          style={{ display: "none" }}
-        ></iframe>
-        <audio id="strtMusic" ref="audio_tag" src={this.state.music} autoPlay />
-        <p
-          onClick={() => {
-            if (this.state.musicPaused === false) {
-              document.getElementById("strtMusic").pause();
-              this.setState({
-                musicPaused: true
-              });
-            } else {
-              document.getElementById("strtMusic").play();
-              this.setState({
-                musicPaused: false
-              });
-            }
-          }}
-          style={{
-            fontSize: "45px",
-            color: "#FF69B4",
-            fontFamily: '"Press Start 2P", cursive',
-            fontStyle: "italic",
-            textShadow: "2px 2px #ff0000",
-            position: "absolute",
-            bottom: "2.5%",
-            right: "2.5%",
-            cursor: "pointer"
-          }}
-        >
-          ||
-        </p>
-
+      <div>
+        <Music />
         {this.renderScreen()}
       </div>
     );

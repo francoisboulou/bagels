@@ -13,16 +13,11 @@ class PlayScreen extends Component {
     };
 
     this.updateGuess = this.updateGuess.bind(this);
-    // this.updateLives = this.updateLives.bind(this);
   }
 
   componentDidMount() {
     document.getElementById("guessInput").focus();
   }
-
-  // updateLives() {
-  //   this.props.updateLives(this.props.guesses - 1);
-  // }
 
   updateGuess(guess) {
     this.setState({

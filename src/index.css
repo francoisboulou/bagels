@@ -2,13 +2,11 @@
   border: 2px solid red;
 }
 @font-face {
-  font-family: "Press Start 2P";
+  font-family: 'Press Start 2P';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Press Start 2P Regular"), local("PressStart2P-Regular"),
-    url(https://fonts.gstatic.com/s/pressstart2p/v8/e3t4euO8T-267oIAQAu6jDQyK3nVivY.ttf)
-      format("truetype");
+  src: local('Press Start 2P Regular'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v8/e3t4euO8T-267oIAQAu6jDQyK3nVivY.ttf) format('truetype');
 }
 @font-face {
   font-family: road-rage;
@@ -166,8 +164,7 @@ body > #root > div {
   font-family: "Neon";
   font-weight: 400;
   text-align: center;
-  text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff,
-    0 0 1rem #fe019a, 0 0 2rem #fe019a, 0 0 3rem #fe019a;
+  text-shadow: -0.2rem -0.2rem 1rem #fff, 0.2rem 0.2rem 1rem #fff, 0 0 1rem #fe019a, 0 0 2rem #fe019a, 0 0 3rem #fe019a;
 }
 .playScreen .lifeCounter {
   position: absolute;

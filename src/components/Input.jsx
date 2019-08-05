@@ -20,6 +20,9 @@ export default class Input extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateGuess(this.state.input);
+    this.setState({
+      input: ""
+    });
   }
 
   render() {
