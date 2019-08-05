@@ -12,7 +12,7 @@ class App extends Component {
 
     this.state = {
       randNum: 0,
-      instructions: true,
+      startScreen: true,
       win: false,
       lives: 15
     };
@@ -22,7 +22,7 @@ class App extends Component {
     this.winCallback = this.winCallback.bind(this);
     this.updateLives = this.updateLives.bind(this);
     this.difficultyCallback = this.difficultyCallback.bind(this);
-    this.instructionsCallback = this.instructionsCallback.bind(this);
+    this.startScreenCallback = this.startScreenCallback.bind(this);
     this.playAgainCallback = this.playAgainCallback.bind(this);
   }
 
@@ -94,16 +94,16 @@ class App extends Component {
     }
   }
 
-  instructionsCallback() {
+  startScreenCallback() {
     this.setState({
-      instructions: false
+      startScreen: false
     });
   }
 
   playAgainCallback() {
     this.setState(
       {
-        instructions: true,
+        startScreen: true,
         lives: 15,
         win: false,
         randomNum: 0
@@ -115,11 +115,11 @@ class App extends Component {
   }
 
   renderScreen() {
-    if (this.state.instructions === true) {
+    if (this.state.startScreen === true) {
       return (
         <StartScreen
-          callbackFromParent={this.difficultyCallback}
-          instructionsCallback={this.instructionsCallback}
+          difficultyCallback={this.difficultyCallback}
+          startScreenCallback={this.startScreenCallback}
         />
       );
     } else if (this.state.lives === 0 || this.state.win === true) {

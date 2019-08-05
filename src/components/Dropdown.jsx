@@ -17,7 +17,6 @@ class Dropdown extends Component {
     this.openMenu = this.openMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.guessesCallback = this.guessesCallback.bind(this);
   }
 
   openMenu(e) {
@@ -50,14 +49,10 @@ class Dropdown extends Component {
         difficulty: e.target.getAttribute("value")
       },
       () => {
-        this.guessesCallback();
+        const difficultyLevel = this.state.difficulty;
+        this.props.difficultyCallback(difficultyLevel);
       }
     );
-  }
-
-  guessesCallback() {
-    const difficultyLevel = this.state.difficulty;
-    this.props.callbackFromParent(difficultyLevel);
   }
 
   render() {

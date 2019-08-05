@@ -1,6 +1,5 @@
 #instOverlay {
   position: absolute;
-  // border: 2px solid red;
   display: none;
   width: 100vw;
   height: 100vh;
@@ -10,17 +9,21 @@
   background-color: rgba(0, 0, 0);
   z-index: 2;
   cursor: pointer;
-}
 
-.instructions {
-  margin-top: 25%;
-  width: 80%;
-}
+  .instClose {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    font-size: 2.5rem;
+  }
 
-.instructionsText p {
-  margin: 0 0 1% 0;
-}
+  .instructionsText {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 
-.instructionsText img {
-  margin-bottom: 1%;
+    p {
+      margin: 0 0 1% 0;
+    }
+  }
 }

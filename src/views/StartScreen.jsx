@@ -33,11 +33,11 @@ class StartScreen extends Component {
             Instructions
           </h2>
           <Dropdown
-            callbackFromParent={this.props.callbackFromParent.bind(this)}
+            difficultyCallback={this.props.difficultyCallback.bind(this)}
           />
           <h2
             className="menuItem"
-            onClick={this.props.instructionsCallback.bind(this)}
+            onClick={this.props.startScreenCallback.bind(this)}
           >
             Start Game
           </h2>

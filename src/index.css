@@ -49,7 +49,7 @@ body > #root > div {
 }
 .title {
   position: absolute;
-  font-size: 10rem;
+  font-size: 10vw;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -114,15 +114,19 @@ body > #root > div {
   z-index: 2;
   cursor: pointer;
 }
-.instructions {
-  margin-top: 25%;
-  width: 80%;
+#instOverlay .instClose {
+  position: absolute;
+  top: 5%;
+  left: 3%;
+  font-size: 2.5rem;
 }
-.instructionsText p {
+#instOverlay .instructionsText {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#instOverlay .instructionsText p {
   margin: 0 0 1% 0;
-}
-.instructionsText img {
-  margin-bottom: 1%;
 }
 .playScreen {
   width: 100%;
@@ -137,8 +141,8 @@ body > #root > div {
   padding-top: 10%;
 }
 .playScreen .controls p {
-  font-size: 7rem;
-  line-height: 6rem;
+  font-size: 7vw;
+  line-height: 6vw;
   text-align: center;
   padding-bottom: 2.5%;
 }
