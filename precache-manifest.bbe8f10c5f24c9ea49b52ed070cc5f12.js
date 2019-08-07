@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "200c43ce292d048f2cecbc7afee8d5e7",
+    "revision": "dd94638309d8393194dfd0c334cf2db0",
     "url": "/bagels/index.html"
   },
   {
-    "revision": "7541791eba01d5c52bc7",
-    "url": "/bagels/static/css/main.ecdf3a91.chunk.css"
+    "revision": "f3cbb1ef23c85ad585fb",
+    "url": "/bagels/static/css/main.1fb19b52.chunk.css"
   },
   {
-    "revision": "41e73928aeb73d739bb5",
-    "url": "/bagels/static/js/2.66c59138.chunk.js"
+    "revision": "a222ae1b1dd8f9e840a0",
+    "url": "/bagels/static/js/2.a5a11340.chunk.js"
   },
   {
-    "revision": "7541791eba01d5c52bc7",
-    "url": "/bagels/static/js/main.93314423.chunk.js"
+    "revision": "f3cbb1ef23c85ad585fb",
+    "url": "/bagels/static/js/main.409f180b.chunk.js"
   },
   {
     "revision": "5fc9e6371f6db5af933f",
@@ -26,18 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1650132350f15261cb195459fd1b0136",
     "url": "/bagels/static/media/Road_Rage.16501323.otf"
-  },
-  {
-    "revision": "523735f34adaffe925a024daf4433a50",
-    "url": "/bagels/static/media/bagel.523735f3.png"
-  },
-  {
-    "revision": "8301c1761ab4d29ee1cfe55fc1b48b55",
-    "url": "/bagels/static/media/fermi.8301c176.png"
-  },
-  {
-    "revision": "7db8175920f1f2090db6ca4425e97ac2",
-    "url": "/bagels/static/media/pico.7db81759.png"
   },
   {
     "revision": "7f1ee86f0fa35250f692cd10ebbc48f4",
