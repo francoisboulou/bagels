@@ -4,6 +4,7 @@ import PlayScreen from "./views/PlayScreen.jsx";
 import EndScreen from "./views/EndScreen.jsx";
 import Music from "./components/Music.jsx";
 import axios from "axios";
+import hasDups from "./utils/hasDups.js";
 import "./index.css";
 
 class App extends Component {
@@ -19,8 +20,8 @@ class App extends Component {
 
     this.getRandomNum = this.getRandomNum.bind(this);
     this.renderScreen = this.renderScreen.bind(this);
-    this.winCallback = this.winCallback.bind(this);
     this.updateLives = this.updateLives.bind(this);
+    this.winCallback = this.winCallback.bind(this);
     this.difficultyCallback = this.difficultyCallback.bind(this);
     this.startScreenCallback = this.startScreenCallback.bind(this);
     this.playAgainCallback = this.playAgainCallback.bind(this);
@@ -30,42 +31,24 @@ class App extends Component {
     this.getRandomNum();
   }
 
-  componentDidUpdate() {
-    console.log(this.state.randNum, this.state.lives);
-  }
-
   getRandomNum() {
-    function hasDups(numberStr) {
-      return (
-        numberStr[0] === numberStr[1] ||
-        numberStr[0] === numberStr[2] ||
-        numberStr[1] === numberStr[2]
-      );
-    }
-
     axios
       .get(
         "https://www.random.org/integers/?num=1&min=100&max=999&col=1&base=10&format=plain"
       )
       .then(response => {
-        let responseStr = response.data + "";
-        let hasDupsVar = hasDups(responseStr);
+        let randNum = response.data;
+        let hasDupsVar = hasDups(randNum);
 
         while (hasDupsVar === true) {
-          responseStr = Number(responseStr) + 1 + "";
-          hasDupsVar = hasDups(responseStr);
+          randNum = Number(randNum) + 1 + "";
+          hasDupsVar = hasDups(randNum);
         }
 
         this.setState({
-          randNum: responseStr
+          randNum: randNum
         });
       });
-  }
-
-  winCallback() {
-    this.setState({
-      win: true
-    });
   }
 
   updateLives() {
@@ -75,7 +58,15 @@ class App extends Component {
     });
   }
 
+  winCallback() {
+    this.setState({
+      win: true
+    });
+  }
+
   difficultyCallback(chosenDifficulty) {
+    console.log(chosenDifficulty);
+
     if (chosenDifficulty === "Easy") {
       this.setState({
         lives: 15
@@ -89,7 +80,7 @@ class App extends Component {
     }
     if (chosenDifficulty === "Hard") {
       this.setState({
-        lives: 5
+        lives: 15
       });
     }
   }

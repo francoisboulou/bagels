@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import hasDups from "../utils/hasDups";
 import "../index.css";
 
 class EvaluateGuess extends Component {
@@ -10,19 +11,12 @@ class EvaluateGuess extends Component {
     this.popResult = this.popResult.bind(this);
   }
 
-  componentDidMount() {}
-
-  componentDidUpdate() {
-    console.log(this.result, this.pico);
-  }
-
   shouldComponentUpdate(nextProps) {
     if (this.props.guess === nextProps.guess) {
       return false;
     } else {
       this.result = [];
       this.pico = false;
-
       return true;
     }
   }
@@ -30,11 +24,6 @@ class EvaluateGuess extends Component {
   validGuess(guess) {
     const guessLen = guess.length === 3;
     const isNum = Number.isInteger(Number(guess));
-
-    function hasDups(guessNum) {
-      const n = (guessNum + "").split("").map(Number);
-      return n[0] === n[1] || n[0] === n[2] || n[1] === n[2];
-    }
 
     return guessLen && isNum && !hasDups(Number(guess));
   }
@@ -76,7 +65,7 @@ class EvaluateGuess extends Component {
     if (this.props.guess.length) {
       if (this.validGuess(this.props.guess)) {
         this.props.updateLives();
-        this.returnClues([...this.props.guess], this.props.randNum);
+        this.returnClues([...this.props.guess], [...(this.props.randNum + "")]);
       } else {
         this.result.push(
           <p className="alert" key="nope">
@@ -88,7 +77,7 @@ class EvaluateGuess extends Component {
       }
     }
 
-    return <div>{this.result}</div>;
+    return this.result;
   }
 
   render() {

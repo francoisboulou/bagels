@@ -26,6 +26,8 @@ class PlayScreen extends Component {
   }
 
   render() {
+    console.log(this.props.lives);
+
     return (
       <div className="playScreen">
         <LifeCounter lives={this.props.lives} />

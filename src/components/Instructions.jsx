@@ -1,7 +1,4 @@
 import React from "react";
-import pico from "../assets/images/pico.png";
-import fermi from "../assets/images/fermi.png";
-import bagel from "../assets/images/bagel.png";
 import "../index.css";
 
 export function Instructions() {
