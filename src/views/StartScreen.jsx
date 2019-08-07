@@ -45,7 +45,6 @@ class StartScreen extends Component {
       </div>
     );
   }
-  //  }
 }
 
 export default StartScreen;

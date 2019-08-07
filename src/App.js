@@ -65,8 +65,6 @@ class App extends Component {
   }
 
   difficultyCallback(chosenDifficulty) {
-    console.log(chosenDifficulty);
-
     if (chosenDifficulty === "Easy") {
       this.setState({
         lives: 15
@@ -78,6 +76,7 @@ class App extends Component {
         lives: 10
       });
     }
+
     if (chosenDifficulty === "Hard") {
       this.setState({
         lives: 15
