@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import StartScreen from "./views/StartScreen.jsx";
-import PlayScreen from "./views/PlayScreen.jsx";
-import EndScreen from "./views/EndScreen.jsx";
 import Music from "./components/Music.jsx";
+import RenderScreen from "./RenderScreen.jsx";
 import axios from "axios";
 import hasDups from "./utils/hasDups.js";
 import "./index.css";
@@ -19,7 +17,6 @@ class App extends Component {
     };
 
     this.getRandomNum = this.getRandomNum.bind(this);
-    this.renderScreen = this.renderScreen.bind(this);
     this.updateLives = this.updateLives.bind(this);
     this.winCallback = this.winCallback.bind(this);
     this.difficultyCallback = this.difficultyCallback.bind(this);
@@ -104,38 +101,21 @@ class App extends Component {
     );
   }
 
-  renderScreen() {
-    if (this.state.startScreen === true) {
-      return (
-        <StartScreen
+  render() {
+    return (
+      <div>
+        <Music />
+        <RenderScreen
           difficultyCallback={this.difficultyCallback}
           startScreenCallback={this.startScreenCallback}
-        />
-      );
-    } else if (this.state.lives === 0 || this.state.win === true) {
-      return (
-        <EndScreen
-          PlayAgainCallback={this.playAgainCallback}
+          startScreen={this.state.startScreen}
+          playAgainCallback={this.playAgainCallback}
           win={this.state.win}
-        />
-      );
-    } else {
-      return (
-        <PlayScreen
           randNum={this.state.randNum}
           lives={this.state.lives}
           updateLives={this.updateLives}
           winCallback={this.winCallback}
         />
-      );
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <Music />
-        {this.renderScreen()}
       </div>
     );
   }
